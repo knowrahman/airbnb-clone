@@ -3,7 +3,7 @@ import Image from "next/image";
 export const ExploreNearby = ({ smallCards }) => {
   return (
     <section className="p-5 pt-0  ">
-      <h1 className="font-bold text-3xl  mt-5">Explore nearby</h1>
+      <h1 className="font-bold text-2xl  mt-5">Explore nearby</h1>
       <div className="overflow-x-scroll pl-5 scrollbar-none">
         <div className="gap-y-3 mt-5 grid grid-cols-4 w-[1024px]  ">
           {smallCards.map((card) => (
@@ -17,8 +17,8 @@ export const ExploreNearby = ({ smallCards }) => {
                 />
               </div>
               <div>
-                <h4>{card.name}</h4>
-                <p>{card.duration}</p>
+                <h4 className="text-gray-500 font-medium">{card.name}</h4>
+                <p className="text-gray-500 ">{card.duration}</p>
               </div>
             </div>
           ))}

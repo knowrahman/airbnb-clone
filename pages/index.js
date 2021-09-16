@@ -2,7 +2,9 @@ import Head from "next/head";
 import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
 import { ExploreNearby } from "../components/ExploreNearby";
-export default function Home({ smallCards }) {
+import { LiveAnywhere } from "../components/LiveAnywhere";
+import { LargeCard } from "../components/LargeCard";
+export default function Home({ smallCards,mediumCards }) {
   console.log("hello" + smallCards);
   return (
     <div className="">
@@ -17,6 +19,8 @@ export default function Home({ smallCards }) {
         <Banner />
         <div className="max-w-[900px]  mx-auto">
           <ExploreNearby smallCards={smallCards} />
+          <LiveAnywhere mediumCards={mediumCards}/>
+          <LargeCard img={"/LargeCard/1.jpg"}/>
         </div>
       </main>
     </div>
@@ -67,6 +71,13 @@ export async function getStaticProps(context) {
           img: "/ExploreNearby/8.webp",
           duration: "10-min drive",
         },
+      ],
+      mediumCards: [
+        { title: "Outdoor getaway", img: "/LiveAnywhere/1.jpg" },
+        { title: "Unique stays", img: "/LiveAnywhere/2.jpg" },
+        { title: "Entire homes", img: "/LiveAnywhere/3.jpg" },
+        { title: "Pets allowed", img: "/LiveAnywhere/4.jpg" },
+        
       ],
     },
   };

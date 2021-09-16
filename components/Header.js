@@ -33,7 +33,10 @@ export const Header = () => {
         <GlobeAltIcon className="h-6 cursor-pointer" />
         <div className="flex h-10 space-x-1 cursor-pointer border-2 rounded-full items-center p-2">
           <MenuIcon  className="h-4"/>
+          <div className="relative">
+          <div className="absolute top-0 right-0 h-3 w-3 rounded-full bg-red-500 border-2 border-white"></div>
           <UserCircleIcon className="h-8" />
+          </div>
         </div>
       </div>
     </header>

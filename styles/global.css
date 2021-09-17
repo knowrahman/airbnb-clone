@@ -1,0 +1,11 @@
+@tailwind components;
+
+@layer components {
+  .button {
+    @apply text-xs px-3 py-2 rounded-full max-w-max border hover:shadow-lg active:scale-95 hover:bg-gray-100 cursor-pointer m-2 ml-0 select-none;
+  }
+}
+
+div {
+  @apply select-none;
+}

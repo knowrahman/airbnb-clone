@@ -10,7 +10,7 @@ export default function Home({ smallCards, mediumCards }) {
   return (
     <div className=''>
       <Head>
-        <title>Airbnb</title>
+        <title>Airbnb-ui-clone</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 

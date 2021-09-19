@@ -4,6 +4,7 @@ import InfoCard from "../components/InfoCard";
 import React from "react";
 import { useRouter } from "next/dist/client/router";
 import Map from "../components/Map";
+import Head from "next/head";
 
 const Search = ({ infoCards }) => {
   const router = useRouter();
@@ -13,6 +14,10 @@ const Search = ({ infoCards }) => {
   const to = new Date(endDate).toDateString();
   return (
     <div>
+      <Head>
+        <title>Search | Airbnb-ui-clone</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <Header location={location} noOfUsers={noOfUsers} from={from} to={to} />
       <main className=' py-0  flex'>
         <section className='py-5 px-5 md:p-8 md:pb-0 flex-grow'>

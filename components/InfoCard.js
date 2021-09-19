@@ -37,7 +37,9 @@ const InfoCard = (props) => {
           </div>
           <div className='flex flex-col items-end'>
             <p className='text-sm'>&#36;{price} /night</p>
-            <p className='text-xs text-gray-500'>total: &#36;{price * 7}</p>
+            <p className='text-xs text-gray-500'>
+              total: &#36;{props.noOfDays * price}
+            </p>
           </div>
         </div>
       </div>

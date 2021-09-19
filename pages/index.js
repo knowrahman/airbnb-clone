@@ -18,7 +18,7 @@ export default function Home({ smallCards, mediumCards }) {
 
       <main className=''>
         <Banner />
-        <div className='max-w-[900px]  mx-auto'>
+        <div className='max-w-[1080px]   mx-auto'>
           <ExploreNearby smallCards={smallCards} />
           <LiveAnywhere mediumCards={mediumCards} />
           <LargeCard img={"/LargeCard/1.jpg"} />

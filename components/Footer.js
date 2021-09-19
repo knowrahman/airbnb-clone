@@ -62,6 +62,18 @@ export const Footer = () => {
           <Link text='Company details' />
         </div>
       </div>
+      <div>
+        <h1>
+          Developed by{" "}
+          <a
+            className='cursor-pointer underline hover:text-red-400'
+            target='_blank'
+            href='https://marahman671.web.app/home-page'
+          >
+            M.A.Rahman
+          </a>
+        </h1>
+      </div>
     </footer>
   );
 };

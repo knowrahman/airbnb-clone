@@ -12,6 +12,7 @@ import {
 import { DateRange, DateRangePicker } from "react-date-range";
 import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const Header = (props) => {
   const [searchInput, setSearchInput] = useState("");
@@ -19,6 +20,7 @@ export const Header = (props) => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+  const router = useRouter();
   const handleSearch = () => {};
 
   const handleCancel = () => {
@@ -39,7 +41,10 @@ export const Header = (props) => {
   return (
     <header className='sticky top-0 z-50 bg-white grid grid-cols-3 p-5 md:px-10 shadow-md'>
       {/* logo */}
-      <div className='h-7 flex my-auto items-center relative cursor-pointer  '>
+      <div
+        className='h-7 flex my-auto items-center relative cursor-pointer  '
+        onClick={() => router.push("/")}
+      >
         <Image
           src='/logo/logo.png'
           layout='fill'
@@ -53,7 +58,8 @@ export const Header = (props) => {
           type='text'
           className='w-full outline-none pl-5 pr-5 my-auto bg-transparent text-xs sm:text-sm placeholder-gray-400 '
           placeholder={
-            (props.location && `${props.location} | ${props.noOfUsers}`) ||
+            (props.location &&
+              `${props.location} | ${props.noOfUsers} | ${props.from} | ${props.to}`) ||
             "Start your search..."
           }
           onChange={(e) => setSearchInput(e.target.value)}
@@ -66,7 +72,7 @@ export const Header = (props) => {
         <h4 className='text-xs hidden md:inline-flex cursor-pointer'>
           Become a host
         </h4>
-        <GlobeAltIcon className='h-6 cursor-pointer' />
+        <GlobeAltIcon className='h-6 cursor-pointer animate-spin' />
         <div className='flex h-10 space-x-1 cursor-pointer border-2 rounded-full items-center p-2'>
           <MenuIcon className='h-4' />
           <div className='relative'>
@@ -105,23 +111,29 @@ export const Header = (props) => {
             </div>
           </div>
           <div className='flex pt-2'>
-            <button className='flex-grow text-gray-400' onClick={handleCancel}>
+            <button
+              className='flex-grow text-gray-400 hover:bg-red-400 rounded-lg py-2 hover:text-white transition duration-150 ease-in-out'
+              onClick={handleCancel}
+            >
               Cancel
             </button>
-            <div className='flex-grow flex justify-center text-red-400'>
-              <Link
-                href={{
-                  pathname: "/search",
-                  query: {
-                    location: searchInput,
-                    startDate: startDate.toISOString,
-                    endDate: endDate.toISOString,
-                    noOfUsers,
-                  },
+            <div className='flex-grow flex justify-center text-red-400 hover:bg-red-400 rounded-lg py-2 hover:text-white transition duration-150 ease-in-out'>
+              <button
+                onClick={() => {
+                  router.push({
+                    pathname: "/search",
+                    query: {
+                      location: searchInput,
+                      startDate: startDate.toISOString(),
+                      endDate: endDate.toISOString(),
+                      noOfUsers,
+                    },
+                  });
+                  setSearchInput("");
                 }}
               >
                 Search
-              </Link>
+              </button>
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ const Search = ({ infoCards }) => {
   return (
     <div>
       <Head>
-        <title>Search | Airbnb-ui-clone</title>
+        <title>Search | anrbob-ui-clone</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header location={location} noOfUsers={noOfUsers} from={from} to={to} />

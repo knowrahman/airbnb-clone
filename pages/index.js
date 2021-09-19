@@ -5,15 +5,20 @@ import { ExploreNearby } from "../components/ExploreNearby";
 import { LiveAnywhere } from "../components/LiveAnywhere";
 import { LargeCard } from "../components/LargeCard";
 import { Footer } from "../components/Footer";
+import React, { useEffect } from "react";
+import Popup from "reactjs-popup";
+// import Popup from "react-popup";
 export default function Home({ smallCards, mediumCards }) {
-  console.log("hello" + smallCards);
+  useEffect(() => {
+    // Popup.alert("This is a dummy UI clone of anrbob website");
+    // Popup.alert("I am alert, nice to meet you");
+  }, []);
   return (
     <div className=''>
       <Head>
-        <title>Airbnb-ui-clone</title>
+        <title>anrbob-ui-clone</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
       <Header />
 
       <main className=''>

@@ -10,7 +10,7 @@ export const Footer = () => {
       <div class=' max-w-[1024px] mx-auto divide-y-[1px] divide-solid divide-gray-600 sm:grid sm:grid-cols-4 sm:divide-none'>
         <div className='flex flex-col gap-y-4 my-5 sm:pt-5'>
           <h1 className='font-medium text-sm text-gray-700'>About</h1>
-          <Link text='How Airbnb works' />
+          <Link text='How anrbob works' />
           <Link text=' Newsroom' />
           <Link text='Investors' />
           <Link text='Careers' />
@@ -22,14 +22,14 @@ export const Footer = () => {
         </div>
         <div className='flex flex-col gap-y-4 pt-5 my-5'>
           <h1 className='font-medium text-sm text-gray-700'>Community</h1>
-          <Link text='How Airbnb works' />
+          <Link text='How anrbob works' />
           <Link text=' Newsroom' />
           <Link text='Investors' />
           <Link text='Careers' />
         </div>
         <div className='flex flex-col gap-y-4 pt-5  my-5'>
           <h1 className='font-medium text-sm text-gray-700'>Host</h1>
-          <Link text='How Airbnb works' />
+          <Link text='How anrbob works' />
           <Link text=' Newsroom' />
           <Link text='Investors' />
           <Link text='Careers' />
@@ -40,7 +40,7 @@ export const Footer = () => {
         </div>
         <div className='flex flex-col gap-y-4 pt-5  mt-5'>
           <h1 className='font-medium text-sm text-gray-700'>Support</h1>
-          <Link text='How Airbnb works' />
+          <Link text='How anrbob works' />
           <Link text=' Newsroom' />
           <Link text='Investors' />
           <Link text='Careers' />
@@ -50,7 +50,8 @@ export const Footer = () => {
       </div>
       <div className='my-5 pt-5 border-t-2 border-solid border-gray-400'>
         <p className='text-sm font-medium'>
-          &copy; {new Date().getFullYear()} Rahman,Inc.
+          {/* &copy; {new Date().getFullYear()} Rahman,Inc. */}
+          This is a dummy website
         </p>
         <div className='mt-2 space-x-2 flex items-center'>
           <Link text='Privacy' />
